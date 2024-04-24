@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+$title-font: "Assistant", sans-serif;
+$header-font: "Playfair Display", serif;
+
+@mixin flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    margin: 0;
+    padding: 0;
+    color: black;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    max-width: 1350px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header-inner{
+     h2{
+        text-align: center;
+        font-weight: 300;
+        font-family: $title-font;
+        font-size: 32px;
+      }
+     h1{
+        margin-top: -10px;
+        text-align: center;
+        font-size: 106px;
+        font-family: $header-font;
+      }
+}
+
+.header-nav{
+    @include flex-center();
+    height: 30px;
+    border-bottom: 1px solid black;
+    text-align: center;
+    border-top: 1px solid black;
+    font-size: 22px;
+    padding: 20px;
+    font-family: $title-font;
+
+    ul{
+        display: flex;
+        list-style: none;
+    }
+      
+    li{
+        text-align: center;
+
+        margin: 0 auto;
+
+        a{ 
+            padding: 20px 0px 20px;
+            padding-left: 30px;
+            padding-right: 30px;
+            color: #000000;
+            margin: 40px;
+            text-align: center;
+            text-decoration: none;
+
+            border-left: 1px solid black;
+    
+        }
+    }
+
+
+
+
+    input{
+        border:none;
+        font-size: 22px;
+        background-color: transparent;
+        color: gray;
+        position: relative;
+        width: 100px;
+        outline: none;
+        border-bottom: 1px solid black ;
+       
+    }
+}
+
+.icons{
+       transform: translateX(40px);
+       display: flex;
+       gap: 20px;
+
+       i{
+        cursor: pointer;
+       }
+}
+
+
+// 
+.main{
+    @include flex-center();
+    margin-top: -200px;
+}
+
+.main-inner{
+   position: relative;
+   
+    border: 1px solid black;
+    width: 1300px;
+    height: 500px;
+
+    h1{
+        position: absolute;
+        top: -90px;
+        left: 0px;
+        
+        font-size: 55px;
+        padding: 10px;
+        font-weight: 300;
+        z-index: 999;
+        background-color: white;
+        border: 1px solid black;
+        font-family: $title-font;
+    }
+}
+
+
+.main-title{
+    @include flex-center();
+    flex-direction: column;
+    height: 600px;
+    
+    text-align: center;
+    h2{
+        font-family: $title-font;
+        font-size: 50px;
+        width: 850px;
+    }
+
+    p{
+        font-family: $title-font;
+        font-size: 22px;
+    }
+}
